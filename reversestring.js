@@ -40,7 +40,33 @@ function reverse3(str) {
 }
 
 
-console.log(reverse1('hello'))
-console.log(reverse2('nanny'))
-console.log(reverse3('manny'))
 
+// console.log(reverse1('hello'))
+// console.log(reverse2('nanny'))
+// console.log(reverse3('manny'))
+
+// var reverseString = function(s) {
+//   let reverse =[]
+//   for (let i = 0; i < s.length; i ++){
+//       reverse[i] = s[s.length - i - 1]
+//   }
+//    return reverse
+// };
+
+// var reverseString = function(s) {
+//   let reverse =[]
+//   for (let index = 0; index < s.length; index ++){
+//       reverse[index] = s[(s.length - index) - 1];
+//   }
+//    return reverse
+// };
+// var reverseString = function(s) {
+//  return s.reverse()
+// };
+var reverseString = function(s) {
+  return s.reduce((result,ch) =>{
+    return result = ch + result
+   },'').split('')
+ };
+
+console.log(reverseString(["h","e","l","l","A"]))
